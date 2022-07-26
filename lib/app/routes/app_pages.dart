@@ -9,12 +9,12 @@ abstract class AppPages {
   static final pages = [
     GetPage(
       name: Routes.HOME, 
-      page:()=> HomePage(),
+      page:()=> const HomePage(),
       transition: Transition.fadeIn
     ),
     GetPage(
       name: Routes.TASK, 
-      page:()=> TaskPage(),
+      page:()=> const TaskPage(),
       transition: Transition.fadeIn,
       binding: TaskBinding()
     )

@@ -1,4 +1,3 @@
-import 'package:date_time_picker/date_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -6,12 +5,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:task_app_prueba/app/controllers/home_controller.dart';
 import 'package:task_app_prueba/app/ui/global_widgets/backgroud.dart';
-import 'package:task_app_prueba/app/ui/pages/home_page/widgets/boton.dart';
-import 'package:task_app_prueba/app/ui/pages/home_page/widgets/input.dart';
-import 'package:task_app_prueba/app/ui/pages/home_page/widgets/input_date.dart';
+import 'package:task_app_prueba/app/ui/global_widgets/boton.dart';
+import 'package:task_app_prueba/app/ui/global_widgets/input.dart';
+import 'package:task_app_prueba/app/ui/global_widgets/input_date.dart';
 
-class FloatingButtom extends StatelessWidget {
-  FloatingButtom({Key? key}) : super(key: key);
+class BottomOfCreateTask extends StatelessWidget {
+  BottomOfCreateTask({Key? key}) : super(key: key);
 
   final homeController = Get.find<HomeController>();
 
@@ -27,6 +26,7 @@ class FloatingButtom extends StatelessWidget {
                 child: Stack(
                   children: [
                   const Backgroud(),
+                  //? formulario de nueva tarea
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -51,12 +51,12 @@ class FloatingButtom extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 20,),
-                        Boton(
+                        StylizedBottom(
                           callback: (){
                             homeController.addTask();
                             Navigator.pop(context);
                           }, 
-                          titulo_del_boton: 'Agregar tarea'
+                          title_of_botton: 'Agregar tarea'
                         ),
                       ],
                     ),

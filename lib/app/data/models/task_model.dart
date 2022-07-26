@@ -17,7 +17,7 @@ class Task {
     final int id;
     final String title;
     final int isCompleted;
-    final DateTime dueDate;
+    final String dueDate;
     final String comments;
     final String description;
     final String tags;
@@ -33,7 +33,7 @@ class Task {
         id: json["id"],
         title: json["title"],
         isCompleted: json["is_completed"],
-        dueDate: DateTime.parse(json["due_date"]),
+        dueDate: json["due_date"] ?? '0000-00-00',
         comments: json["comments"],
         description: json["description"],
         tags: json["tags"],
@@ -46,7 +46,7 @@ class Task {
         "id": id,
         "title": title,
         "is_completed": isCompleted,
-        "due_date": "${dueDate.year.toString().padLeft(4, '0')}-${dueDate.month.toString().padLeft(2, '0')}-${dueDate.day.toString().padLeft(2, '0')}",
+        "due_date": dueDate,
         "comments": comments,
         "description": description,
         "tags": tags,

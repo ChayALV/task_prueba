@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_app_prueba/app/ui/utils/utilits.dart';
 
-class Boton extends StatelessWidget {
+class StylizedBottom extends StatelessWidget {
   final VoidCallback callback;
-  final String titulo_del_boton;
-  const Boton({Key? key,required this.callback,required this.titulo_del_boton}) : super(key: key);
+  final String title_of_botton;
+  const StylizedBottom({Key? key,required this.callback,required this.title_of_botton}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class Boton extends StatelessWidget {
             ]
           ),
           child: Center(child: Text(
-            titulo_del_boton,
+            title_of_botton,
             style:  GoogleFonts.roboto(
               fontWeight: FontWeight.w100,
               fontSize: 20,
